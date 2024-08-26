@@ -1,0 +1,57 @@
+@import url(../index.css);
+
+.task-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Added to vertically center items */
+    width: 450px;
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.task-form input {
+    width: 100%; /* Adjusted to occupy the remaining space */
+    max-width: 350px; /* Maximum width to prevent overflow */
+    padding: 10px;
+    outline: 1px solid var(--light-dark);
+    border-radius: 2px;
+    color: var(--dark-color);
+    border: none; /* Remove default border for better look */
+}
+
+.task-form button {
+    width: 80px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    font-weight: bold;
+    border: none; /* Remove default border for better look */
+}
+
+.task-form button:hover {
+    background-color: var(--secondary-light);
+}
+
+.task-form button:active {
+    background-color: var(--secondary-dark); /* Changed to darker shade for active state */
+}
+
+@media (max-width: 800px) {
+    .task-form {
+        width: 96%;
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Stretch items to fit container */
+    }
+
+    .task-form input {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove maximum width constraint */
+        margin-bottom: 10px; /* Add spacing between input and button */
+    }
+
+    .task-form button {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px; /* Add spacing between button and other elements */
+    }
+}
